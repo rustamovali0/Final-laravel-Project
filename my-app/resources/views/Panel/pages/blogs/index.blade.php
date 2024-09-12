@@ -4,7 +4,7 @@
     <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Blog Listesi</h4>
+                <h4 class="card-title">Bloq siyahısı</h4>
                 <p class="card-description">
                     <a href="{{ route('blogs.create') }}" class="btn btn-primary">Blog Ekle</a>
                 </p>
@@ -19,6 +19,7 @@
                     <table class="table">
                         <thead>
                             <tr>
+                                <th>ID</th>
                                 <th>Resim</th>
                                 <th>Başlık</th>
                                 <th>Slug</th>

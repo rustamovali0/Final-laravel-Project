@@ -34,7 +34,7 @@ class ServiceController extends Controller
             'status' => $request->status,
         ]);
 
-        return redirect()->route('services.index')->with('success', 'Service created successfully.');
+        return redirect()->route('services.index')->with('success', 'Xidmət uğurla yaradıldı!');
     }
 
     public function edit($id)
@@ -58,7 +58,7 @@ class ServiceController extends Controller
             'status' => $request->status,
         ]);
 
-        return redirect()->route('services.index')->with('success', 'Service updated successfully.');
+        return redirect()->route('services.index')->with('success', 'Xidmət uğurla redaktə edildi!');
     }
 
     public function destroy($id)
@@ -66,6 +66,6 @@ class ServiceController extends Controller
         $service = Service::findOrFail($id);
         $service->delete();
 
-        return redirect()->route('services.index')->with('success', 'Service deleted successfully.');
+        return redirect()->route('services.index')->with('success', 'Xidmət uğurla silindi!');
     }
 }

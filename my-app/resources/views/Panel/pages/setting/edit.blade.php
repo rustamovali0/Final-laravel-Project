@@ -4,7 +4,7 @@
     <div class="col-12 grid-margin stretch-card">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Parametr Elave Et</h4>
+            <h4 class="card-title">Footer text əlavə et</h4>
             @if ($errors->any())
             @foreach ($errors->all() as $error)
             <div class="alert alert-danger">
@@ -29,16 +29,16 @@
     @endif
 
     <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" name="name" value="{{ old('name', $setting->name ?? '') }}" placeholder="Setting Başlığı">
+        <label for="name">Key</label>
+        <input type="text" class="form-control" id="name" name="name" value="{{ old('name', $setting->name ?? '') }}" placeholder="Key">
     </div>
     <div class="form-group">
         <label for="data">Data</label>
-        <input type="text" class="form-control" id="data" name="data" value="{{ old('data', $setting->data ?? '') }}" placeholder="Setting İçeriği">
+        <input type="text" class="form-control" id="data" name="data" value="{{ old('data', $setting->data ?? '') }}" placeholder="Data">
     </div>
 
-    <button type="submit" class="btn btn-primary mr-2">Submit</button>
-    <button type="reset" class="btn btn-light">Cancel</button>
+    <button type="submit" class="btn btn-primary mr-2">Təsdiq et</button>
+    <button type="reset" class="btn btn-light">Ləğv et</button>
 </form>
 
 

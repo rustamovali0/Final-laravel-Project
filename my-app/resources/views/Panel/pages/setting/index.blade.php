@@ -4,7 +4,7 @@
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Esas Ayarlar</h4>
+                    <h4 class="card-title">Footer text əlavə et</h4>
                     <p class="card-description">
                         <a href="{{ route('setting.create') }}" class="btn btn-primary">Yarat</a>
                     </p>
@@ -19,16 +19,18 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>Sekil</th>
+                                    <th>ID</th>
+                                    <th>Şəkil</th>
                                     <th>Key</th>
-                                    <th>Value</th>
-                                    <th>Edit</th>
+                                    <th>Data</th>
+                                    <th>Redaktə et</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @if (!empty($settings) && $settings->count() > 0)
                                     @foreach ($settings as $setting)
                                         <tr>
+                                            <td>{{ $setting->id }}</td>
 
                                             <td class="py-1">
                                                 @if ($setting->set_type =='image')
@@ -41,7 +43,7 @@
                                             <td>{{ $setting->set_type }}</td>
                                             <td class="d-flex">
                                                 <a href="{{ route('setting.edit', $setting->id) }}"
-                                                    class="btn btn-primary mr-2">Redakte et</a>
+                                                    class="btn btn-primary mr-0">Redaktə et</a>
                                             </td>
                                             <form action="{{route('setting.destroy',$setting->id)}}" method="POST">
                                                 @csrf

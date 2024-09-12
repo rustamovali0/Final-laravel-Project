@@ -4,7 +4,7 @@
     <div class="col-12 grid-margin stretch-card">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Slider elave et</h4>
+            <h4 class="card-title">Slayd əlavə et</h4>
             @if ($errors)
             @foreach ($errors->all() as $error)
             <div class="alert alert-danger">
@@ -36,32 +36,32 @@
               @endif
               <div class="form-group">
                 <div class="input-group col-xs-12">
-                    <img style="width: 150px; height: 100px;" src="{{ asset('AdminPanel/img/slider/' . ($slider->image ?? 'ResimYok.jpg')) }}" alt="image"/>
+                    <img style="width: 150px; height: 100px;" src="{{ asset('AdminPanel/img/slider/' . ($slider->image ?? 'cc.jpg')) }}" alt="image"/>
 
                 </div>
               </div>
               <div class="form-group">
-                <label for="name">Slider basliq</label>
+                <label for="name">Slayd adı</label>
                 <input type="text" class="form-control" id="name" name="name" value="{{$slider->name  ?? ''}}" placeholder="Slider basliq">
               </div>
               <div class="form-group">
-                <label for="content">Content</label>
+                <label for="content">Məzmun</label>
                 <textarea class="form-control" id="content" name="content" placeholder="Slider content" rows="3">{!!$slider->content  ?? '' !!}</textarea>
               </div>
               <div class="form-group">
-                <label for="link">Slider link</label>
+                <label for="link">Slayd linki</label>
                 <input type="text" class="form-control" id="link" name="link" value="{{$slider->link  ?? ''}}" placeholder="Slider linki">
               </div>
 
 
 
               <div class="form-group">
-                <label>Sekil elave et</label>
+                <label>Şəkil əlavə et</label>
                 <input type="file" name="image" class="file-upload-default">
                 <div class="input-group col-xs-12">
                   <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
                   <span class="input-group-append">
-                    <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+                    <button class="file-upload-browse btn btn-primary" type="button">Yüklə</button>
                   </span>
                 </div>
               </div>
@@ -77,8 +77,8 @@
                 </select>
               </div>
 
-              <button type="submit" class="btn btn-primary mr-2">Submit</button>
-              <button class="btn btn-light">Cancel</button>
+              <button type="submit" class="btn btn-primary mr-2">Təsdiq et</button>
+              <button class="btn btn-light">Ləğv et</button>
             </form>
           </div>
         </div>

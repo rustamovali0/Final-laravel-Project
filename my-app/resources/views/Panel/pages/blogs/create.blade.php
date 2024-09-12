@@ -1,7 +1,7 @@
 @extends('Panel.layouts.app')
 @section('content')
 <div class="container">
-    <h2>Create Blog</h2>
+    <h2>Bloq yarat</h2>
 
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -16,7 +16,7 @@
     <form action="{{ route('blogs.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
-            <label for="title">Title</label>
+            <label for="title">Başlıq</label>
             <input type="text" id="title" name="title" class="form-control" value="{{ old('title') }}" required>
         </div>
         <div class="form-group">
@@ -24,14 +24,17 @@
             <input type="text" id="slug" name="slug" class="form-control" value="{{ old('slug') }}" required>
         </div>
         <div class="form-group">
-            <label for="description">Description</label>
+            <label for="description">Açıqlama</label>
             <textarea id="description" name="description" class="form-control" rows="4" required>{{ old('description') }}</textarea>
         </div>
         <div class="form-group">
-            <label for="image">Image</label>
-            <input type="file" id="image" name="image" class="form-control">
+            <label for="image">Şəkil</label>
+            <input type="file" name="image" class="form-control">
+            <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $product->name }}" width="100">
+            <img style="width: 150px; height: 100px;" src="{{ asset('AdminPanel/img/products/' . ($product->image ?? 'aa.jpg')) }}" alt="image"/>
+
         </div>
-        <button type="submit" class="btn btn-primary">Create Blog</button>
+        <button type="submit" class="btn btn-primary">Təsdiq et</button>
     </form>
 </div>
 @endsection

@@ -76,6 +76,7 @@
     <script src="{{asset('Front/assets/js/jquery.ajaxchimp.min.js')}}"></script>
     <script src="{{asset('Front/assets/js/plugins.js')}}"></script>
     <script src="{{asset('Front/assets/js/main.js')}}"></script>
+    <script src="{{asset('Front/assets/js/slider.js')}}"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
     <script>
         window.dataLayer = window.dataLayer || [];

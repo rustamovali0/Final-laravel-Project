@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -21,7 +21,7 @@ return new class extends Migration
             $table->double('price',8,2)->nullable();
             $table->string('color')->nullable();
             $table->integer('qty')->nullable();
-            $table->enum ('status',['0','1'])->default('0');
+            $table->enum ('status',['0','1'])->default('1');
             $table->string('suitability')->nullable();
             $table->longText('content')->nullable();
 

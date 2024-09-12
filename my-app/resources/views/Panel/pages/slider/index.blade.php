@@ -4,7 +4,7 @@
     <div class="col-lg-12 grid-margin stretch-card">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Slider Table</h4>
+          <h4 class="card-title">Slaydların siyahısı</h4>
           <p class="card-description">
           <a href="{{route('slider.create')}}" class="btn btn-primary">Yarat</a>
         </p>
@@ -19,18 +19,21 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th>Sekil</th>
-                  <th>Basliq</th>
-                  <th>Content </th>
+                    <th>ID</th>
+                    <th>Şəkil</th>
+                    <th>Başlıq</th>
+                  <th>Məzmun </th>
                   <th>Link</th>
                   <th>Status</th>
-                  <th>Edit</th>
+                  <th>Redaktə et</th>
                 </tr>
               </thead>
               <tbody>
                 @if (!empty($sliders) && $sliders->count() > 0)
                 @foreach ($sliders as $slider)
                 <tr>
+                    <td>{{$slider->id}}</td>
+
                     <td class="py-1">
                         <img src="{{ asset('AdminPanel/img/slider/' . $slider->image) }}" alt="image"/>
                     </td>

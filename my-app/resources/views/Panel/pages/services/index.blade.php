@@ -4,9 +4,9 @@
     <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Services Table</h4>
+                <h4 class="card-title">Xidmətlər siyahısı</h4>
                 <p class="card-description">
-                    <a href="{{ route('services.create') }}" class="btn btn-primary">Create Service</a>
+                    <a href="{{ route('services.create') }}" class="btn btn-primary">Xidmət yarat</a>
                 </p>
 
                 @if (session()->get('success'))
@@ -19,11 +19,12 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>Description</th>
+                                <th>ID</th>
+                                <th>Ad</th>
+                                <th>Açıqlama</th>
                                 <th>Status</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
+                                <th>Redaktə</th>
+                                <th>Sil</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -38,13 +39,13 @@
                                             </label>
                                         </td>
                                         <td>
-                                            <a href="{{ route('services.edit', $service->id) }}" class="btn btn-primary">Edit</a>
+                                            <a href="{{ route('services.edit', $service->id) }}" class="btn btn-primary">Redaktə et</a>
                                         </td>
                                         <td>
                                             <form action="{{ route('services.destroy', $service->id) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="btn btn-danger">Delete</button>
+                                                <button type="submit" class="btn btn-danger">Sil</button>
                                             </form>
                                         </td>
                                     </tr>

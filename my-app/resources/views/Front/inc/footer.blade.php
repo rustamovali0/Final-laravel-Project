@@ -2,34 +2,23 @@
 <div class="footer-wrapper gray-bg">
     <div class="footer-area footer-padding">
 
-    <section class="subscribe-area">
-    <div class="container">
-    <div class="row justify-content-between subscribe-padding">
-    <div class="col-xxl-3 col-xl-3 col-lg-4">
-    <div class="subscribe-caption">
-    <h3>Subscribe Newsletter</h3>
-    <p>Subscribe newsletter to get 5% on all products.</p>
-    </div>
-    </div>
-    <div class="col-xxl-5 col-xl-6 col-lg-7 col-md-9">
-    <div class="subscribe-caption">
-    <form action="#">
-    <input type="text" placeholder="Enter your email">
-    <button class="subscribe-btn">Subscribe</button>
-    </form>
-    </div>
-    </div>
-    <div class="col-xxl-2 col-xl-2 col-lg-4">
+        <section class="subscribe-area">
+            <div class="container">
+                <div class="row justify-content-between subscribe-padding">
+                    <div class="">
+                        <div class="subscribe-caption text-center" style="width: 100%; text-align: center;">
+                            <span class="brand-name" style="display: inline-block; color: #ffffff; font-size: 60px; margin: 0 35px; vertical-align: middle; font-family:'Times New Roman', Times, serif; font-weight:700;">EPSON</span>
+                            <span class="brand-name" style="display: inline-block; color: #ffffff; font-size: 60px; margin: 0 35px; vertical-align: middle; font-family:'Times New Roman', Times, serif; font-weight:700;">XEROX</span>
+                            <span class="brand-name" style="display: inline-block; color: #ffffff; font-size: 60px; margin: 0 35px; vertical-align: middle; font-family:'Times New Roman', Times, serif; font-weight:700;">HP</span>
+                            <span class="brand-name" style="display: inline-block; color: #ffffff; font-size: 60px; margin: 0 35px; vertical-align: middle; font-family:'Times New Roman', Times, serif; font-weight:700;">CANON</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="footer-social">
-    <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-youtube"></i></a>
-    </div>
-    </div>
-    </div>
-    </div>
-    </section>
+
+
 
     <div class="container">
     <div class="row justify-content-between">
@@ -47,9 +36,11 @@
     <div class="single-footer-caption mb-50">
     <div class="footer-tittle">
     <ul>
-        <li><a href="#">{{ $setting['adres'] ?? 'Adres bilgisi bulunamadı' }}</a></li>
-        <li><a href="#">{{ $setting['phone'] ?? 'Telefon bilgisi bulunamadı' }}</a></li>
-        <li><a href="#">{{ $setting['email'] ?? 'Email bilgisi bulunamadı' }}</a></li>
+        <li><a href="#">{{ $setting['text'] ?? 'Text tapilmadi' }}</a></li>
+        <li><a href="#">{{ $setting['adres'] ?? 'Adres tapilmadi' }}</a></li>
+        <li><a href="#">{{ $setting['phone'] ?? 'Telefon tapilmadi' }}</a></li>
+        <li><a href="#">{{ $setting['phone'] ?? 'Telefon tapilmadi' }}</a></li>
+
     </ul>
     </div>
     </div>

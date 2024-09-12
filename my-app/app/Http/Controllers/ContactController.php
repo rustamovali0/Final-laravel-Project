@@ -18,7 +18,7 @@ class ContactController extends Controller
 
         Contact::create($validated);
 
-        return redirect()->back()->with('success', 'Mesajınız başarıyla gönderildi!');
+        return redirect()->back()->with('success', 'Mesajınız uğurla göndərildi!');
     }
 
     public function index()
@@ -31,9 +31,9 @@ class ContactController extends Controller
         $contact = Contact::find($id);
         if ($contact) {
             $contact->delete();
-            return redirect()->route('contact.index')->with('success', 'Mesaj başarıyla silindi!');
+            return redirect()->route('contact.index')->with('success', 'Mesaj uğurla silindi!');
         } else {
-            return redirect()->route('contact.index')->with('error', 'Mesaj bulunamadı!');
+            return redirect()->route('contact.index')->with('error', 'Mesaj tapılmadı!');
         }
     }
 }

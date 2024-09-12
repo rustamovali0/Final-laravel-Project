@@ -1,28 +1,27 @@
 @extends('Front.layout.layout')
 
 @section('content')
-    <section class="slider-area ">
+<section class="slider-area">
+    <div class="slider-active">
         @foreach ($sliders as $slider)
-        <div class="single-slider slider-bg2 slider-height d-flex align-items-center" style="background-image:url({{ asset('AdminPanel/img/slider/' . $slider->image) }})">
-            <div class="container">
-                <div class="row justify-content-end">
-                    <div class="col-xxl-5 col-xl-6 col-lg-7 col-md-8 col-sm-10">
-                        <div class="hero-caption text-center">
-                            <span>{{ $slider->name }}</span>
-                            <h1 data-animation="bounceIn" data-delay="0.2s">{{  old('content', $slider->content ?? '') }}</h1>
-
-                            <a href="{{ route('form') }}" class="btn_1 hero-btn" data-animation="fadeInUp" data-delay="0.7s">Bizimlə əlaqə</a>
+            <div class="single-slider slider-bg2 slider-height d-flex align-items-center" style="background-image:url({{ asset('AdminPanel/img/slider/' . $slider->image) }})">
+                <div class="container">
+                    <div class="row justify-content-end">
+                        <div class="col-xxl-5 col-xl-6 col-lg-7 col-md-8 col-sm-10">
+                            <div class="hero-caption text-center">
+                                <span>{{ $slider->name }}</span>
+                                <h1 data-animation="bounceIn" data-delay="0.2s">{{ old('content', $slider->content ?? '') }}</h1>
+                                <a href="{{ route('form') }}" class="btn_1 hero-btn" data-animation="fadeInUp" data-delay="0.7s">Bizimlə əlaqə</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    @endforeach
+        @endforeach
+    </div>
 
-    <!-- Slider Navigation Buttons -->
-    <button class="slider-nav prev-slide">‹</button>
-    <button class="slider-nav next-slide">›</button>
-    </section>
+</section>
+
 
 
     <section class="items-product1 pt-30">

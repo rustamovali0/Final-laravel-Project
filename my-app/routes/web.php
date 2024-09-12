@@ -33,7 +33,7 @@ Route::group(['middleware' => 'setting'], function() {
 
 // Backend (Panel) Routes
 Route::group(['middleware' => 'panelsetting', 'prefix' => 'panel'], function() {
-    Route::get('/', [DashboardController::class, 'index'])->name('panel');
+    Route::get('/', [SliderController::class, 'index'])->name('panel');
 
     Route::get('/slider', [SliderController::class, 'index'])->name('slider.index');
     Route::get('/slider/add', [SliderController::class, 'create'])->name('slider.create');

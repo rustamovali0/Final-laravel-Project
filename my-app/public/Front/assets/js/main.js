@@ -9,31 +9,7 @@
     });
   });
 
-  document.addEventListener('DOMContentLoaded', function() {
-    const prevButton = document.querySelector('.prev-slide');
-    const nextButton = document.querySelector('.next-slide');
-    const slides = document.querySelectorAll('.single-slider');
-    let currentIndex = 0;
-
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.style.display = i === index ? 'block' : 'none';
-        });
-    }
-
-    prevButton.addEventListener('click', function() {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
-        showSlide(currentIndex);
-    });
-
-    nextButton.addEventListener('click', function() {
-        currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
-        showSlide(currentIndex);
-    });
-
-    showSlide(currentIndex); // Show the first slide initially
-});
-
+  
 /* 1. sticky And Scroll UP */
     $(window).on('scroll', function () {
       var scroll = $(window).scrollTop();

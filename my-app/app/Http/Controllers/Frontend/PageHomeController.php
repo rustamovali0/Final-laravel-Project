@@ -14,7 +14,7 @@ use App\Http\Controllers\Controller;
 class PageHomeController extends Controller
 {
     public function index() {
-        $slider = Slider::where('status', '1')->first();
+        $sliders = Slider::all();
 
         $products = Product::where('status', '1')->get();
 
@@ -27,6 +27,6 @@ class PageHomeController extends Controller
 
         $title = "Homepage";
 
-        return view('Front.pages.index', compact('slider', 'title', 'products', 'categories', 'services', 'blogs','about'));
+        return view('Front.pages.index', compact('sliders', 'title', 'products', 'categories', 'services', 'blogs','about'));
     }
 }

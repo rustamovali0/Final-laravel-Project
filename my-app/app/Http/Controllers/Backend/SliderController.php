@@ -15,7 +15,8 @@ class SliderController extends Controller
      */
     public function index()
     {
-        $sliders = Slider::where('status', 1)->get();
+        $sliders = Slider::all();
+
         return view('Panel.pages.slider.index',compact('sliders'));
     }
 
@@ -33,6 +34,7 @@ class SliderController extends Controller
      */
     public function store(SliderRequest $request)
     {
+        $fayladi = null;
         if($request->hasFile('image')){
             $sekil = $request->file('image');
             $fayladi = time()."-".Str::slug($request->name).'.'.$sekil->getClientOriginalExtension();

@@ -31,7 +31,7 @@ class BlogController extends Controller
             'image' => str_replace('public/', '', $imagePath),
         ]);
 
-        return redirect()->route('blogs.index')->with('success', 'Blog created successfully.');
+        return redirect()->route('blogs.index')->with('success', 'Bloq uğurla yaradıldı!');
     }
 
     public function edit(Blog $blog)
@@ -69,6 +69,6 @@ class BlogController extends Controller
 
         $blog->update($data);
 
-        return redirect()->route('blogs.index')->with('success', 'Blog updated successfully.');
+        return redirect()->route('blogs.index')->with('success', 'Bloq uğurla redaktə edildi!');
     }
 }

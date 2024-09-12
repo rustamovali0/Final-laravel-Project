@@ -2,9 +2,19 @@
 
 @section('content')
 <div class="container">
-    <h1>Yeni Ürün Ekle</h1>
+    <h1>Yeni məhsul əlavə et</h1>
     <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
+        <div class="form-group">
+            <label>Şəkil əlavə et</label>
+            <input type="file" name="image" class="file-upload-default">
+            <div class="input-group col-xs-12">
+              <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
+              <span class="input-group-append">
+                <button class="file-upload-browse btn btn-primary" type="button">Yüklə</button>
+              </span>
+            </div>
+          </div>
         <div class="form-group">
             <label for="name">Ad</label>
             <input type="text" name="name" id="name" class="form-control" required>
@@ -14,9 +24,7 @@
             <input type="text" name="slug" id="slug" class="form-control" required>
         </div>
         <div class="form-group">
-            <label for="image">Şəkil</label>
-            <input type="file" name="image" id="image" class="form-control" required>
-        </div>
+
         {{-- <div class="form-group">
             <label for="category_id">Kategori</label>
             <select name="category_id" id="category_id" class="form-control" required>

@@ -24,16 +24,16 @@
             </a>
             <div class="collapse" id="product-menu">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('products.index') }}">Mehsulların siyahısı</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('products.create') }}">Mehsul elave et</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('products.index') }}">Məhsulların siyahısı</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('products.create') }}">Məhsul əlavə et</a></li>
                 </ul>
             </div>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="{{route('setting.index')}}">
-                <i class="icon-settings menu-icon"></i>
-                <span class="menu-title">Sayt parametrləri</span>
+            <a class="nav-link" href="{{route('setting.index')}}" aria-expanded="false">
+                <i class="icon-layout menu-icon"></i>
+                <span class="menu-title">Footer text əlavə et</span>
             </a>
         </li>
 
@@ -52,33 +52,33 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#blog-menu" aria-expanded="false" aria-controls="blog-menu">
-                <i class="icon-pencil menu-icon"></i>
+                <i class="icon-layout menu-icon"></i>
                 <span class="menu-title">Blog</span>
                 <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="blog-menu">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" href="{{ route('blogs.index') }}">Blog Siyahısı</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('blogs.create') }}">Blog Əlavə</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('blogs.create') }}">Blog Əlavə et</a></li>
                 </ul>
             </div>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{{route('contact.index')}}">
-                <i class="icon-envelope menu-icon"></i>
-                <span class="menu-title">Bizimle elaqe</span>
+                <i class="icon-star menu-icon"></i>
+                <span class="menu-title">Bizimlə əlaqə</span>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#about-menu" aria-expanded="false" aria-controls="about-menu">
-                <i class="icon-info menu-icon"></i>
-                <span class="menu-title">Hakkımızda</span>
+                <i class="icon-layout menu-icon"></i>
+                <span class="menu-title">Haqqımızda</span>
                 <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="about-menu">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('about.index') }}">Hakkımızda Siyahısı</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('about.create') }}">Hakkımızda Əlavə et</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('about.index') }}">Haqqımızda Siyahısı</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('about.create') }}">Haqqımızda Əlavə et</a></li>
                 </ul>
             </div>
         </li>

@@ -41,7 +41,7 @@
                         <ul id="navigation">
                             <li><a href="{{ route('index') }}">Ana səhifə</a></li>
                             <li><a href="{{ route('about') }}">Haqqımızda</a></li>
-                            <li class="new"><a href="{{ route('services') }}">Xidmətlər</a></li>
+                            <li><a href="{{ route('services') }}">Xidmətlər</a></li>
                             <li><a href="{{ route('products') }}">Məhsullar</a>
 
                             </li>
