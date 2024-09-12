@@ -24,6 +24,7 @@
                                     <th>Key</th>
                                     <th>Data</th>
                                     <th>Redaktə et</th>
+                                    <th>Sil</th>
                                 </tr>
                             </thead>
                             <tbody>

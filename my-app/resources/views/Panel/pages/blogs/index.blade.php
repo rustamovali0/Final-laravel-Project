@@ -20,13 +20,13 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Resim</th>
-                                <th>Başlık</th>
+                                <th>Şəkil</th>
+                                <th>Başlıq</th>
                                 <th>Slug</th>
-                                <th>Açıklama</th>
-                                <th>Kategori</th>
+                                <th>Açıqlama</th>
+                                <th>Kateqorya</th>
                                 <th>Status</th>
-                                <th>Düzenle</th>
+                                <th>Redaktə et</th>
                                 <th>Sil</th>
                             </tr>
                         </thead>
@@ -35,15 +35,17 @@
                             @foreach ($blogs as $blog)
                             <tr>
                                 <td class="py-1">
+                                    <td>{{ $blog->id }}</td>
+
                                     <img src="{{ asset('storage/' . $blog->image) }}" alt="image" style="width: 50px; height: 50px;"/>
                                 </td>
                                 <td>{{ $blog->title }}</td>
                                 <td>{{ $blog->slug }}</td>
                                 <td>{{ Str::limit($blog->description, 50) }}</td>
-                                <td>{{ $blog->category ?? 'Yok' }}</td>
-                                <td><label class="badge badge-{{ $blog->status == '1' ? 'success' : 'danger' }}">{{ $blog->status == '1' ? 'Aktif' : 'Pasif' }}</label></td>
+                                <td>{{ $blog->category ?? 'Yoxdur' }}</td>
+                                <td><label class="badge badge-{{ $blog->status == '1' ? 'success' : 'danger' }}">{{ $blog->status == '1' ? 'Aktiv' : 'Deaktiv' }}</label></td>
                                 <td>
-                                    <a href="{{ route('blogs.edit', $blog->id) }}" class="btn btn-primary">Düzenle</a>
+                                    <a href="{{ route('blogs.edit', $blog->id) }}" class="btn btn-primary">Redaktə et</a>
                                 </td>
                                 <td>
                                     <form action="{{ route('blogs.destroy', $blog->id) }}" method="POST">

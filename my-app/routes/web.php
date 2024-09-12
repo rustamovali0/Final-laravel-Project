@@ -50,6 +50,7 @@ Route::group(['middleware' => 'panelsetting', 'prefix' => 'panel'], function() {
     Route::delete('/setting/{id}', [SettingController::class, 'destroy'])->name('setting.destroy');
 
     Route::get('/contacts', [ContactController::class, 'index'])->name('contact.index');
+    Route::delete('/contact/{id}', [ContactController::class, 'destroy'])->name('contact.destroy');
 
     Route::resource('products', ProductController::class);
 

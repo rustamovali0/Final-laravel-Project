@@ -28,12 +28,15 @@
             <textarea id="description" name="description" class="form-control" rows="4" required>{{ old('description') }}</textarea>
         </div>
         <div class="form-group">
-            <label for="image">Şəkil</label>
-            <input type="file" name="image" class="form-control">
-            <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $product->name }}" width="100">
-            <img style="width: 150px; height: 100px;" src="{{ asset('AdminPanel/img/products/' . ($product->image ?? 'aa.jpg')) }}" alt="image"/>
-
-        </div>
+            <label>Şəkil əlavə et</label>
+            <input type="file" name="image" class="file-upload-default">
+            <div class="input-group col-xs-12">
+              <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
+              <span class="input-group-append">
+                <button class="file-upload-browse btn btn-primary" type="button">Yüklə</button>
+              </span>
+            </div>
+          </div>
         <button type="submit" class="btn btn-primary">Təsdiq et</button>
     </form>
 </div>

@@ -2,20 +2,22 @@
 
 @section('content')
 <div class="container">
-    <h1>Abouts</h1>
-    <a href="{{ route('about.create') }}" class="btn btn-primary">Add New About</a>
+    <h3>Haqqında</h3>
+    <a href="{{ route('about.create') }}" class="btn btn-primary">Əlavə et</a>
     <table class="table mt-3">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Content</th>
-                <th>Image</th>
-                <th>Actions</th>
+                <th>ID</th>
+                <th>Başlıq</th>
+                <th>Açıqlama</th>
+                <th>Şəkil</th>
+                <th>Fəaliyyətlər</th>
             </tr>
         </thead>
         <tbody>
             @foreach($abouts as $about)
             <tr>
+                <td>{{ $about->id }}</td>
                 <td>{{ $about->name }}</td>
                 <td>{{ Str::limit($about->content, 50) }}</td>
                 <td>
@@ -24,11 +26,11 @@
                     @endif
                 </td>
                 <td>
-                    <a href="{{ route('about.edit', $about->id) }}" class="btn btn-primary">Edit</a>
+                    <a href="{{ route('about.edit', $about->id) }}" class="btn btn-primary">Redaktə et</a>
                     <form action="{{ route('about.destroy', $about->id) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger">Sil</button>
                     </form>
                 </td>
             </tr>

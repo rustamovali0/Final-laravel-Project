@@ -33,7 +33,7 @@
         <li class="nav-item">
             <a class="nav-link" href="{{route('setting.index')}}" aria-expanded="false">
                 <i class="icon-layout menu-icon"></i>
-                <span class="menu-title">Footer text əlavə et</span>
+                <span class="menu-title">Footer text</span>
             </a>
         </li>
 
@@ -66,7 +66,7 @@
         <li class="nav-item">
             <a class="nav-link" href="{{route('contact.index')}}">
                 <i class="icon-star menu-icon"></i>
-                <span class="menu-title">Bizimlə əlaqə</span>
+                <span class="menu-title">Gələn mesajlar</span>
             </a>
         </li>
         <li class="nav-item">

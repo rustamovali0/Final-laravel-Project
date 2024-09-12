@@ -26,6 +26,7 @@
                   <th>Link</th>
                   <th>Status</th>
                   <th>Redaktə et</th>
+                  <th>Sil</th>
                 </tr>
               </thead>
               <tbody>
