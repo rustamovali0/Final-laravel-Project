@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Backend;
 
 use App\Models\Comment;
@@ -17,26 +16,33 @@ class CommentController extends Controller
     public function create()
     {
         return view('Panel.pages.comments.create');
-
     }
 
     public function store(Request $request)
-    {
-        $data = $request->validate([
-            'author_name' => 'required|string|max:255',
-            'author_position' => 'nullable|string|max:255',
-            'comment' => 'required|string',
-            'image' => 'nullable|image',
-            'status' => 'required|boolean',
-        ]);
+{
+    $data = $request->validate([
+        'author_name' => 'required|string|max:255',
+        'author_position' => 'nullable|string|max:255',
+        'comment' => 'required|string',
+        'image' => 'nullable|image',
+    ]);
 
-        if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('comments');
-        }
-
-        Comment::create($data);
-        return redirect()->route('comments.index')->with('success', 'Comment uğurla əlavə olundu.');
+    if ($request->hasFile('image')) {
+        $imagePath = $request->file('image')->store('public/comments');
+        $data['image'] = str_replace('public/', '', $imagePath);
+    } else {
+        $data['image'] = null;
     }
+
+    Comment::create([
+        'author_name' => $request->input('author_name'),
+        'author_position' => $request->input('author_position'),
+        'comment' => $request->input('comment'),
+        'image' => $data['image'],
+    ]);
+
+    return redirect()->route('comments.index')->with('success', 'Komment uğurla əlavə olundu!');
+}
 
     public function edit($id)
     {
@@ -57,7 +63,13 @@ class CommentController extends Controller
         $comment = Comment::findOrFail($id);
 
         if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('comments');
+            if ($comment->image) {
+                $oldImagePath = storage_path('app/public/storage/comments' . $comment->image);
+                if (file_exists($oldImagePath)) {
+                    unlink($oldImagePath);
+                }
+            }
+            $data['image'] = $request->file('image')->store('public/comments');
         }
 
         $comment->update($data);
@@ -69,17 +81,17 @@ class CommentController extends Controller
         $comment = Comment::find($id);
 
         if (!$comment) {
-            return redirect()->route('comments.index')->with('error', 'Yorum bulunamadı');
+            return redirect()->route('comments.index')->with('error', 'Tapılmadı');
         }
 
-        if ($comment->image && file_exists(public_path('storage/' . $comment->image))) {
-            unlink(public_path('storage/' . $comment->image));
+        if ($comment->image) {
+            $imagePath = storage_path('app/public/comments/' . $comment->image);
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
         }
 
         $comment->delete();
-
-        return redirect()->route('comments.index')->with('Uğurla silindi');
+        return redirect()->route('comments.index')->with('success', 'Komment uğurla silindi.');
     }
-
-
 }

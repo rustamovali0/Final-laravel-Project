@@ -32,7 +32,7 @@
             <label for="image">Şəkil</label>
             <input type="file" name="image" class="form-control">
             <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $product->name }}" width="100">
-            <img style="width: 150px; height: 100px;" src="{{ asset('AdminPanel/img/products/' . ($product->image ?? 'aa.jpg')) }}" alt="image"/>
+            <img style="width: 150px; height: 100px;" src="{{ asset('storage/' . $blog->image) . ($blog->image ?? 'aa.jpg')) }}" alt="image"/>
 
         </div>
         <button type="submit" class="btn btn-primary">Təsdiq et</button>

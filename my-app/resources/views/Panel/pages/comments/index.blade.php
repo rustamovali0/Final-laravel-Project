@@ -36,7 +36,7 @@
                 <tr>
                     <td>{{$comment->id}}</td>
                     <td class="py-1">
-                        <img src="{{ asset('storage/comments/' . $comment->image) }}" alt="Image">
+                        <img src="{{asset('storage/' . $comment->image)}}" alt="Image">
 
                     </td>
                     <td>{{$comment->author_name}}</td>
