@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Models\Blog;
 use App\Models\About;
 use App\Models\Slider;
+use App\Models\Comment;
 use App\Models\Product;
 use App\Models\Service;
 use App\Models\Category;
@@ -23,10 +24,12 @@ class PageHomeController extends Controller
         $services = Service::all();
 
         $blogs = Blog::where('status', '1')->get();
+        $comments = Comment::all();
+
         $about = Service::all();
 
         $title = "Homepage";
 
-        return view('Front.pages.index', compact('sliders', 'title', 'products', 'categories', 'services', 'blogs','about'));
+        return view('Front.pages.index', compact('sliders', 'title', 'products', 'categories', 'services', 'blogs','comments','about'));
     }
 }

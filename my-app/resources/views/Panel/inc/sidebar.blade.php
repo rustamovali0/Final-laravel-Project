@@ -64,6 +64,19 @@
             </div>
         </li>
         <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#comment-menu" aria-expanded="false" aria-controls="comment-menu">
+                <i class="icon-speech menu-icon"></i>
+                <span class="menu-title">Yorumlar</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="comment-menu">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('comments.index') }}">Yorumlar Siyahısı</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('comments.create') }}">Yorum Əlavə et</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="{{route('contact.index')}}">
                 <i class="icon-star menu-icon"></i>
                 <span class="menu-title">Gələn mesajlar</span>

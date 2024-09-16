@@ -43,8 +43,6 @@ class SettingController extends Controller
     return view('Panel.pages.setting.edit', compact('setting'));
 }
 
-
-    // Ayarı güncelleme
     public function update(Request $request, $id)
     {
         $validatedData = $request->validate([
@@ -71,12 +69,12 @@ public function destroy($id)
     $setting = Setting::find($id);
 
     if (!$setting) {
-        return redirect()->route('setting.index')->with('error', 'Ayar bulunamadı');
+        return redirect()->route('setting.index')->with('error', 'Tapılmadı');
     }
 
     $setting->delete();
 
-    return redirect()->route('setting.index')->with('success', 'Ayar başarıyla silindi');
+    return redirect()->route('setting.index')->with('success', 'Uğurla silindi');
 }
 
 }

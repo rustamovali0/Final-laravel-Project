@@ -101,51 +101,26 @@
                 <div class="col-xl-10 col-lg-10 col-md-11">
                     <div class="h1-testimonial-active">
 
+                        @foreach ($comments as $comment)
                         <div class="single-testimonial text-center">
-                            <div class="testimonial-caption ">
+                            <div class="testimonial-caption">
                                 <div class="testimonial-top-cap">
                                     <h2>Müştəri Rəyi</h2>
-                                    <p>Sizinlə müqavilə bağlayandan sonra,nəhayət ki kartric və printer ilə bağlı olan problemlərimiz aradan qaldırıldı.</p>
+                                    <p>{{ $comment->comment }}</p>
                                 </div>
-
                                 <div class="testimonial-founder d-flex align-items-center justify-content-center">
                                     <div class="founder-img">
-                                        <img src="{{ asset('Front/assets/img/gallery/founder-img.png') }}"
-                                            alt="">
+                                        <img src="{{ asset('storage/comments/' . $comment->image) }}" alt="Image">
                                     </div>
                                     <div class="founder-text">
-                                        <span>FIDAN KADIROVA</span>
-                                        <p>"AQUAVITA"</p>
+                                        <span>{{ $comment->author_name }}</span>
+                                        <p>{{ $comment->author_position }}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        @endforeach
 
-                        <div class="single-testimonial text-center">
-                            <div class="testimonial-caption ">
-                                <div class="testimonial-top-cap">
-                                    <div class="testimonial-top-cap">
-                                        <h2>Müştəri Rəyi</h2>
-                                        <p>Münasib qiymətlərlə printer və katriclərimizə yüksək keyfiyyətli xidmət göstərirsiniz.Vacibi olan isə sifariş verendən sonra ən qısa zaman ərzinde gəlirsiniz və bu bizim üçün çox önəmlidir.
-                                        </p>
-                                    </div>
-
-                                </div>
-
-                                <div class="testimonial-founder d-flex align-items-center justify-content-center">
-                                    <div class="founder-img">
-                                        <img src="{{ asset('Front/assets/img/gallery/founder-img.png') }}"
-                                            alt="">
-                                    </div>
-                                    <div class="founder-text">
-                                        <span>LƏTİFƏ MƏMMƏDOVA
-                                        </span>
-                                        <p>“KRİSTAL”MMC
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
