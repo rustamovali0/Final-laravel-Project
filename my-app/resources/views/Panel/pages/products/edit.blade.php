@@ -18,12 +18,18 @@
     </div>
 
     <div class="form-group">
-        <label for="image">Məhsulun şəkili</label>
-        <input type="file" name="image" class="form-control">
-        <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" width="100">
-        <img style="width: 150px; height: 100px;" src="{{ asset('AdminPanel/img/products/' . ($product->image ?? 'ResimYok.jpg')) }}" alt="image"/>
+        <label>Şəkil əlavə et</label>
+        <input type="file" name="image" class="file-upload-default">
+        <div class="input-group col-xs-12">
+          <input type="text" class="form-control file-upload-info" disabled placeholder="Şəkil yüklə">
+          <span class="input-group-append">
+            <button class="file-upload-browse btn btn-primary" type="button">Yüklə</button>
+          </span>
+        </div>
+      </div>
 
-    </div>
+
+
 
     <div class="form-group">
         <label for="price">Qiyməti</label>

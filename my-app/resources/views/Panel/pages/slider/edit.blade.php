@@ -41,17 +41,14 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="name">Slayd adı</label>
+                <label for="name">Slayd Başlıq</label>
                 <input type="text" class="form-control" id="name" name="name" value="{{$slider->name  ?? ''}}" placeholder="Slider basliq">
               </div>
               <div class="form-group">
                 <label for="content">Məzmun</label>
                 <textarea class="form-control" id="content" name="content" placeholder="Slider content" rows="3">{!!$slider->content  ?? '' !!}</textarea>
               </div>
-              <div class="form-group">
-                <label for="link">Slayd linki</label>
-                <input type="text" class="form-control" id="link" name="link" value="{{$slider->link  ?? ''}}" placeholder="Slider linki">
-              </div>
+
 
 
 
@@ -59,7 +56,7 @@
                 <label>Şəkil əlavə et</label>
                 <input type="file" name="image" class="file-upload-default">
                 <div class="input-group col-xs-12">
-                  <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
+                  <input type="text" class="form-control file-upload-info" disabled placeholder="Şəkil yüklə">
                   <span class="input-group-append">
                     <button class="file-upload-browse btn btn-primary" type="button">Yüklə</button>
                   </span>

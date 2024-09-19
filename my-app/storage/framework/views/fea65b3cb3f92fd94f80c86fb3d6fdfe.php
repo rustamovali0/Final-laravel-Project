@@ -1,26 +1,20 @@
-@extends('Panel.layouts.app')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 <div class="container">
     <h1>Yeni məhsul əlavə et</h1>
-    <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
-        @csrf
+    <form action="<?php echo e(route('products.store')); ?>" method="POST" enctype="multipart/form-data">
+        <?php echo csrf_field(); ?>
 
         <div class="form-group">
-            <label for="name">Məhsulun Adı</label>
+            <label for="name">Ad</label>
             <input type="text" name="name" id="name" class="form-control" required>
         </div>
         <div class="form-group">
             <label for="slug">Slug</label>
-            <input type="text" name="slug" id="slug" class="form-control" required>
+            <input type="text" name="slug" id="slug" class="form-control">
         </div>
         <div class="form-group">
 
-        {{-- <div class="form-group">
-            <label for="category_id">Kategori</label>
-            <select name="category_id" id="category_id" class="form-control" required>
-            </select>
-        </div> --}}
+        
         <div class="form-group">
             <label>Şəkil əlavə et</label>
             <input type="file" name="image" class="file-upload-default">
@@ -50,10 +44,7 @@
                 <option value="1">Aktiv</option>
             </select>
         </div>
-        {{-- <div class="form-group">
-            <label for="suitability">Uygunluq</label>
-            <input type="text" name="suitability" id="suitability" class="form-control">
-        </div> --}}
+        
         <div class="form-group">
             <label for="content">Açıqlama</label>
             <textarea name="content" id="content" class="form-control"></textarea>
@@ -61,4 +52,6 @@
         <button type="submit" class="btn btn-primary">Əlavə et</button>
     </form>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('Panel.layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\Ali\Desktop\Final-laravel-Project\my-app\resources\views/panel/pages/products/create.blade.php ENDPATH**/ ?>

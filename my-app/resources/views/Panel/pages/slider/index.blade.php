@@ -23,7 +23,6 @@
                     <th>Şəkil</th>
                     <th>Başlıq</th>
                   <th>Məzmun </th>
-                  <th>Link</th>
                   <th>Status</th>
                   <th>Redaktə et</th>
                   <th>Sil</th>
@@ -40,7 +39,6 @@
                     </td>
                       <td>{{$slider->name}}</td>
                       <td>{{$slider->content ?? ''}}</td>
-                      <td>{{$slider->link}}</td>
                       <td><label class="badge badge-{{$slider->status == '1' ? 'success' : 'danger'}}">{{$slider->status == '1' ? 'Aktiv' : 'Deaktiv'}}</label></td>
                       <td class="d-flex">
                         <a href="{{route('slider.edit',$slider->id)}}" class="btn btn-primary mr-2">Redakte et</a></td>
