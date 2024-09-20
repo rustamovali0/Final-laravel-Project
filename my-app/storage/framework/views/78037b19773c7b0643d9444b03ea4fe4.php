@@ -13,8 +13,8 @@
                 <tr>
                     <th>ID</th>
                     <th>Şəkil</th>
-                    <th>Slug</th>
                     <th>Ad</th>
+                    <th>Slug</th>
                     <th>Qiymət</th>
                     <th>Fəaliyyətlər</th>
                 </tr>

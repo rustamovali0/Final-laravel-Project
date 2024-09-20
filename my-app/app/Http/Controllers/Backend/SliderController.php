@@ -48,7 +48,8 @@ class SliderController extends Controller
             'status'=>$request->status,
             'image'=>$fayladi,
         ]);
-        return back()->withSuccess('Ugurla yaradildi!');
+        // return back()->withSuccess('Ugurla yaradildi!');
+        return redirect()->route('slider.index')->with('success', 'Uğurla redaktə edildi!');
 
 
     }

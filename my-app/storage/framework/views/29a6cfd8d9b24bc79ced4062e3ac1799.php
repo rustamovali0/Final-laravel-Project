@@ -49,7 +49,7 @@
                 <label for="content">Məzmun</label>
                 <textarea class="form-control" id="content" name="content" placeholder="Slider content" rows="3"><?php echo $slider->content  ?? ''; ?></textarea>
               </div>
-            
+
 
 
 
@@ -57,7 +57,7 @@
                 <label>Şəkil əlavə et</label>
                 <input type="file" name="image" class="file-upload-default">
                 <div class="input-group col-xs-12">
-                  <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
+                  <input type="text" class="form-control file-upload-info" disabled placeholder="Şəkil yüklə">
                   <span class="input-group-append">
                     <button class="file-upload-browse btn btn-primary" type="button">Yüklə</button>
                   </span>

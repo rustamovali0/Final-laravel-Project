@@ -10,10 +10,7 @@
         <input type="text" name="name" class="form-control" value="<?php echo e(old('name', $product->name)); ?>" required>
     </div>
 
-    <div class="form-group">
-        <label for="slug">Slug</label>
-        <input type="text" name="slug" class="form-control" value="<?php echo e(old('slug', $product->slug)); ?>">
-    </div>
+  
 
     <div class="form-group">
         <label>Şəkil əlavə et</label>

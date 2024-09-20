@@ -24,9 +24,7 @@ class ProductController extends Controller
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'slug' => 'required|string|max:255|unique:products',
             'image' => 'required|image',
-            // 'category_id' => 'required|exists:categories,id',
             'short_text' => 'nullable|string',
             'price' => 'required|numeric',
             'color' => 'nullable|string',
@@ -38,24 +36,24 @@ class ProductController extends Controller
 
         $imagePath = $request->file('image')->store('products', 'public');
 
-        Product::create(array_merge($validated, ['image' => $imagePath]));
+        // Slug'ı otomatik olarak name alanından oluştur
+        $validated['slug'] = Str::slug($validated['name'], '-');
 
+        Product::create(array_merge($validated, ['image' => $imagePath]));
 
         return redirect()->route('products.index')->with('success', 'Məhsul uğurla əlavə edildi!');
     }
 
     public function edit(Product $product)
     {
-return view('Panel.pages.products.edit', compact('product'));
+        return view('Panel.pages.products.edit', compact('product'));
     }
 
     public function update(Request $request, Product $product)
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'slug' => 'required|string|max:255|unique:products,slug,' . $product->id,
             'image' => 'nullable|image',
-            // 'category_id' => 'required|exists:categories,id',
             'short_text' => 'nullable|string',
             'price' => 'required|numeric',
             'color' => 'nullable|string',
@@ -70,9 +68,11 @@ return view('Panel.pages.products.edit', compact('product'));
             $validated['image'] = $imagePath;
         }
 
+        $validated['slug'] = Str::slug($validated['name'], '-');
+
         $product->update($validated);
 
-        return redirect()->route('products.index')->with('success', 'Məhsul uğurla redaktə edildi!');
+        return redirect()->route(route: 'products.index')->with('success', 'Məhsul uğurla redaktə edildi!');
     }
 
     public function destroy(Product $product)

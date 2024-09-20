@@ -10,7 +10,6 @@ class ServiceController extends Controller
 {
     public function index()
     {
-        // Servisleri listele
         $services = Service::all();
         return view('Panel.pages.services.index', compact('services'));
     }

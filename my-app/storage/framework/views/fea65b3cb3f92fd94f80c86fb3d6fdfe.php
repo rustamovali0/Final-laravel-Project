@@ -5,13 +5,10 @@
         <?php echo csrf_field(); ?>
 
         <div class="form-group">
-            <label for="name">Ad</label>
+            <label for="name">Məhsulun Adı</label>
             <input type="text" name="name" id="name" class="form-control" required>
         </div>
-        <div class="form-group">
-            <label for="slug">Slug</label>
-            <input type="text" name="slug" id="slug" class="form-control">
-        </div>
+
         <div class="form-group">
 
         
@@ -29,10 +26,7 @@
             <label for="price">Qiymət</label>
             <input type="number" name="price" id="price" class="form-control" step="0.01" required>
         </div>
-        <div class="form-group">
-            <label for="color">Rəng</label>
-            <input type="text" name="color" id="color" class="form-control">
-        </div>
+     
         <div class="form-group">
             <label for="qty">Sayı</label>
             <input type="number" name="qty" id="qty" class="form-control" required>

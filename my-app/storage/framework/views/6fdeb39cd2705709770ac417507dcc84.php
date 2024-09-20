@@ -23,7 +23,6 @@
                     <th>Şəkil</th>
                     <th>Başlıq</th>
                   <th>Məzmun </th>
-                  <th>Link</th>
                   <th>Status</th>
                   <th>Redaktə et</th>
                   <th>Sil</th>
@@ -40,7 +39,6 @@
                     </td>
                       <td><?php echo e($slider->name); ?></td>
                       <td><?php echo e($slider->content ?? ''); ?></td>
-                      <td><?php echo e($slider->link); ?></td>
                       <td><label class="badge badge-<?php echo e($slider->status == '1' ? 'success' : 'danger'); ?>"><?php echo e($slider->status == '1' ? 'Aktiv' : 'Deaktiv'); ?></label></td>
                       <td class="d-flex">
                         <a href="<?php echo e(route('slider.edit',$slider->id)); ?>" class="btn btn-primary mr-2">Redakte et</a></td>
