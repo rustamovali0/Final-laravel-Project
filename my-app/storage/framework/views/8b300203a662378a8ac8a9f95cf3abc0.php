@@ -4,7 +4,11 @@
         <div class="row justify-content-center">
             <div class="cl-xl-7 col-lg-8 col-md-10">
                 <div class="section-tittle text-center mb-40">
-                    <h2>Son xəbərlər</h2>
+                    <h2>Xidmətlər</h2>
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a href="<?php echo e(route('index')); ?>">Ana səhifə</a></li>
+                        <li class="breadcrumb-item"><a href="">Xidmətlər</a></li>
+                    </ol>
                 </div>
             </div>
         </div>

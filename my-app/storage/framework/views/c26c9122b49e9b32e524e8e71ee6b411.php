@@ -19,7 +19,9 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="<?php echo e(asset('AdminPanel/css/vertical-layout-light/style.css')); ?>">
   <!-- endinject -->
-  <link rel="shortcut icon" type="image/x-icon" href="<?php echo e(asset('Front/assets/img/icon/favicon.png')); ?>">
+  <link rel="shortcut icon" type="image/x-icon" href="<?php echo e(asset('Front/assets/img/icon/loder.png')); ?>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 
 <body>

@@ -7,8 +7,8 @@
                     <div class="row justify-content-end">
                         <div class="col-xxl-5 col-xl-6 col-lg-7 col-md-8 col-sm-10">
                             <div class="hero-caption text-center">
-                                <span><?php echo e($slider->name); ?></span>
-                                <h1 data-animation="bounceIn" data-delay="0.2s"><?php echo e(old('content', $slider->content ?? '')); ?></h1>
+                                <span style="color: rgb(5, 222, 251)"><?php echo e($slider->name); ?></span>
+                                <h1 data-animation="bounceIn" data-delay="0.2s" style="font-size: 2rem; color:white"><?php echo e(old('content', $slider->content ?? '')); ?></h1>
                                 <a href="<?php echo e(route('form')); ?>" class="btn_1 hero-btn" data-animation="fadeInUp" data-delay="0.7s">Bizimlə əlaqə</a>
                             </div>
                         </div>
@@ -64,18 +64,14 @@
                                 <div class="properties-card">
                                     <div class="properties-img">
                                         <a href="<?php echo e(route('proDetails', $product->slug)); ?>">
-                                            <img src="<?php echo e(asset('storage/' . $product->image)); ?>" alt="">
-                                            <div class="socal_icon">
-                                            <a href="#"><i class="ti-shopping-cart"></i></a>
-                                            <a href="#"><i class="ti-heart"></i></a>
-                                            <a href="#"><i class="ti-zoom-in"></i></a>
-                                            </div>
+                                            <img src="<?php echo e(asset('storage/' . $product->image)); ?>" alt="" style="width: 15rem; height:10rem">
+
                                             </div>
                                             <div class="properties-caption properties-caption2">
                                             <h3><a href="<?php echo e(route('proDetails', $product->slug)); ?>"><?php echo e($product->name); ?></a></h3>
                                             <div class="properties-footer">
                                             <div class="price">
-                                            <span>$ <?php echo e(number_format($product->price,0)); ?></span>
+                                            <span><?php echo e(number_format($product->price,2)); ?> ₼</span>
                                             </div>
                                         </div>
                                     </div>
@@ -142,18 +138,14 @@
                     <div class="properties-card">
                         <div class="properties-img">
                             <a href="<?php echo e(route('proDetails', $product->slug)); ?>">
-                                <img src="<?php echo e(asset('storage/' . $product->image)); ?>" alt="">
-                                <div class="socal_icon">
-                                <a href="#"><i class="ti-shopping-cart"></i></a>
-                                <a href="#"><i class="ti-heart"></i></a>
-                                <a href="#"><i class="ti-zoom-in"></i></a>
-                                </div>
+                                <img src="<?php echo e(asset('storage/' . $product->image)); ?>" alt="" style="width: 15rem; height:10rem">
+
                                 </div>
                                 <div class="properties-caption properties-caption2">
                                 <h3><a href="<?php echo e(route('proDetails', $product->slug)); ?>"><?php echo e($product->name); ?></a></h3>
                                 <div class="properties-footer">
                                 <div class="price">
-                                <span>$ <?php echo e(number_format($product->price,0)); ?></span>
+                                <span><?php echo e(number_format($product->price,2)); ?> ₼</span>
                                 </div>
                             </div>
                         </div>
@@ -172,7 +164,7 @@
             <div class="row justify-content-center">
                 <div class="cl-xl-7 col-lg-8 col-md-10">
                     <div class="section-tittle text-center mb-40">
-                        <h2>Son xəbərlər</h2>
+                        <h2>Xidmətlər</h2>
                     </div>
                 </div>
             </div>

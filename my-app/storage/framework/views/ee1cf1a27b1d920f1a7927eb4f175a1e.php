@@ -30,11 +30,11 @@
     <div class="container">
     <div class="menu-wrapper">
 
-        <div class="logo">
+        <div class="logo" style="display: flex; align-items: center;">
+            <img src="<?php echo e(asset('Front/assets/img/icon/loder.png')); ?>" alt="" width="50px" height="50px">
+            <h2 style="margin-top: 13px; margin-left: 10px; font-weight:600;">KARTİC</h2>
+        </div>
 
-            <img src="<?php echo e(asset('Front/assets/img/logo/logo.png')); ?>"
-            alt="" width="120px" height="50px" style="background-color: black">
-            </div>
 
     <div class="main-menu d-none d-lg-block">
     <nav>

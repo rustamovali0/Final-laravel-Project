@@ -3,7 +3,13 @@
 @section('content')
 <div class="order-form" style="margin-left: 20px; margin-right: 20px; display: flex;">
     <div style="flex: 1;">
-        <h2  style="margin-left: 3rem;">Əlaqə - Sifariş Formu</h2>
+        <h2  style="margin:2rem 0rem 1rem 3rem;">Əlaqə - Sifariş Formu</h2>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb" style="margin-left:3rem; margin-bottom:1rem;">
+                <li class="breadcrumb-item"><a href="{{ route('index') }}">Ana səhifə</a></li>
+                <li class="breadcrumb-item"><a href="">Əlaqə</a></li>
+            </ol>
+        </nav>
         <form action="{{ route('contact.form') }}" method="post"  style="margin-left: 3rem; margin-bottom: 3rem; " >
              @csrf
             <div class="form-group">

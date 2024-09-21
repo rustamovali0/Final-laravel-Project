@@ -8,11 +8,11 @@
     <div class="slider-area">
     <div class="slider-height2 slider-bg4 d-flex align-items-center justify-content-center">
     <div class="hero-caption hero-caption2">
-    <h2>Products</h2>
+    <h2>Məhsullar</h2>
     <nav aria-label="breadcrumb">
     <ol class="breadcrumb justify-content-center">
-    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-    <li class="breadcrumb-item"><a href="#">Category</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('index') }}">Ana səhifə</a></li>
+        <li class="breadcrumb-item"><a href="">Məhsullar</a></li>
     </ol>
     </nav>
     </div>
@@ -47,18 +47,14 @@
         <div class="properties-card">
         <div class="properties-img">
         <a href="{{route('proDetails', $product->slug)}}">
-            <img src="{{ asset('storage/' . $product->image) }}" alt="">
-            <div class="socal_icon">
-        <a href="#"><i class="ti-shopping-cart"></i></a>
-        <a href="#"><i class="ti-heart"></i></a>
-        <a href="#"><i class="ti-zoom-in"></i></a>
-        </div>
+            <img src="{{ asset('storage/' . $product->image) }}" alt="" style="width: 15rem; height:10rem">
+
         </div>
         <div class="properties-caption properties-caption2">
         <h3><a href="{{route('proDetails', $product->slug)}}">{{$product->name}}</a></h3>
         <div class="properties-footer">
         <div class="price">
-        <span>$ {{number_format($product->price,0)}}</span>
+        <span>{{number_format($product->price,2)}} ₼</span>
         </div>
         </div>
         </div>

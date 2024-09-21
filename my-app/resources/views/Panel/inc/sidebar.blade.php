@@ -4,7 +4,7 @@
 
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                <i class="icon-layout menu-icon"></i>
+                <i class="fas fa-images menu-icon"></i>
                 <span class="menu-title">Slayd</span>
                 <i class="menu-arrow"></i>
             </a>
@@ -18,7 +18,7 @@
 
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#product-menu" aria-expanded="false" aria-controls="product-menu">
-                <i class="icon-box menu-icon"></i>
+                <i class="fas fa-boxes menu-icon"></i>
                 <span class="menu-title">Məhsullar</span>
                 <i class="menu-arrow"></i>
             </a>
@@ -32,14 +32,14 @@
 
         <li class="nav-item">
             <a class="nav-link" href="{{route('setting.index')}}" aria-expanded="false">
-                <i class="icon-layout menu-icon"></i>
+                <i class="fas fa-pen menu-icon"></i>
                 <span class="menu-title">Footer text</span>
             </a>
         </li>
 
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#service-menu" aria-expanded="false" aria-controls="service-menu">
-                <i class="icon-star menu-icon"></i>
+                <i class="fas fa-concierge-bell menu-icon"></i>
                 <span class="menu-title">Xidmətlər</span>
                 <i class="menu-arrow"></i>
             </a>
@@ -52,7 +52,7 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#blog-menu" aria-expanded="false" aria-controls="blog-menu">
-                <i class="icon-layout menu-icon"></i>
+                <i class="fas fa-blog menu-icon"></i>
                 <span class="menu-title">Blog</span>
                 <i class="menu-arrow"></i>
             </a>
@@ -65,7 +65,7 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#comment-menu" aria-expanded="false" aria-controls="comment-menu">
-                <i class="icon-speech menu-icon"></i>
+                <i class="fas fa-comments menu-icon"></i>
                 <span class="menu-title">Yorumlar</span>
                 <i class="menu-arrow"></i>
             </a>
@@ -78,13 +78,13 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{{route('contact.index')}}">
-                <i class="icon-star menu-icon"></i>
+                <i class="fas fa-envelope menu-icon"></i>
                 <span class="menu-title">Gələn mesajlar</span>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#about-menu" aria-expanded="false" aria-controls="about-menu">
-                <i class="icon-layout menu-icon"></i>
+                <i class="fas fa-info-circle menu-icon"></i>
                 <span class="menu-title">Haqqımızda</span>
                 <i class="menu-arrow"></i>
             </a>

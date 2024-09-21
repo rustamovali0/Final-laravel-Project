@@ -1,6 +1,4 @@
-@extends('Front.layout.layout')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
     <main>
         <div class="hero-area section-bg2">
             <div class="container">
@@ -13,7 +11,7 @@
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb justify-content-center">
                                             <li class="breadcrumb-item">
-                                                <a href="{{ route('index') }}">Ana səhifə</a>
+                                                <a href="<?php echo e(route('index')); ?>">Ana səhifə</a>
                                             </li>
                                             <li class="breadcrumb-item">
                                                 <a href="#">Məhsul açıqlaması</a>
@@ -36,14 +34,14 @@
                             <div class="col-xl-12">
                                 <div class="single-services d-flex align-items-center mb-0">
                                     <div class="features-img">
-                                        <img src="{{ asset('storage/' . $product->image) }}" alt="" style="width: 300px; height:300px;">
+                                        <img src="<?php echo e(asset('storage/' . $product->image)); ?>" alt="" style="width: 300px; height:300px;">
 
                                     </div>
                                     <div class="features-caption">
-                                        <h3>{{ $product->name ?? '' }}</h3>
+                                        <h3><?php echo e($product->name ?? ''); ?></h3>
                                         <p>By Kartic</p>
                                         <div class="price">
-                                            <span>{{number_format($product->price,2)}} ₼</span>
+                                            <span><?php echo e(number_format($product->price,2)); ?> ₼</span>
                                         </div>
                                         <div class="review">
                                             <div class="rating">
@@ -55,7 +53,7 @@
                                             </div>
                                             <p>(120 Baxış)</p>
                                         </div>
-                                        <a href="{{ route('contact') }}" class="white-btn mr-10">Sifariş et</a>
+                                        <a href="<?php echo e(route('contact')); ?>" class="white-btn mr-10">Sifariş et</a>
 
                                     </div>
                                 </div>
@@ -90,7 +88,8 @@
                         <div class="row">
                             <div class="offset-xl-1 col-lg-9">
                                 <p>
-                                    {!! $product->content ?? '' !!}
+                                    <?php echo $product->content ?? ''; ?>
+
                                 </p>
 
                             </div>
@@ -129,4 +128,6 @@
             </div>
         </section>
     </main>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('Front.layout.layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\Ali\Desktop\Final-laravel-Project\my-app\resources\views/Front/pages/proDetails.blade.php ENDPATH**/ ?>
